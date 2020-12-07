@@ -26,7 +26,7 @@ local succes, data = turtle.inspectDown()
           end
           turtle.digDown()
             elseif data.name == notItems[5] then
-              turtle.select(15)
+              turtle.select(16)
               turtle.placeDown()
             else
           turtle.digDown()      
@@ -46,7 +46,7 @@ local succes, data = turtle.inspectUp()
             end
             turtle.digUp()
             elseif data.name== notItems[5] then
-              turtle.select(15)
+              turtle.select(16)
               turtle.placeUp()
           else
           turtle.digUp()     
@@ -197,7 +197,7 @@ function dropItems()
   gohome()
   returnto()
   local number = 2
-  for i = 1, 13 do
+  for i = 1, 14 do
     turtle.select(number)
     turtle.drop()
     number = number+1
@@ -305,8 +305,7 @@ function calcEnergy()
 end
  
 print("Please put first coal in slot 1...") 
-print("some filling blocks in slot 15...")
-print("and a enderchest in slot 16.")
+print("some filling blocks in slot 16...")
 print("And don't forget to chunkload the area.")
 os.pullEvent()
  
@@ -351,4 +350,9 @@ end
  
 print("Done!!!")
 goHome()
-dropItems()
+local number = 2
+for i = 1, 14 do
+  turtle.select(number)
+  turtle.drop()
+  number = number+1
+end
