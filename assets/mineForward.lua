@@ -8,7 +8,8 @@ function mineForward(num)
         print(i)
         i = i + 1
 end
-    turtle.digup()
+    turtle.digUp()
+    turtle.up()
     turtle.turnRight()
     turtle.turnRight()
 
@@ -21,5 +22,5 @@ end
         print(i)
         i = i + 1
 end
-
+end
 mineForward(20)
