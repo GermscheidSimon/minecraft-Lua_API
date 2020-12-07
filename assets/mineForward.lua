@@ -11,6 +11,7 @@ function mineForward(num)
         i = i + 1
     end
     turtle.digup()
+    turtle.up()
     turtle.turnRight()
     turtle.turnRight()
 
