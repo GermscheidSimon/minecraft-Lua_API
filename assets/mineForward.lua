@@ -48,7 +48,7 @@ end
 
 print("Size?")
     square = tonumber(read())
-    
+
 mineForward(square)
 
 
@@ -67,3 +67,4 @@ function canMove(direction)
         canmoveInDirection = turtle.up()
 end
 
+end
