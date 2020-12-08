@@ -2,34 +2,54 @@ local y = 0 -- updown
 local x = 0 -- forward
 local z = 0 -- side-side
 
+local square = 0 -- size of mine area
+
 
 function mineForward(num)
-    turtle.refuel()
-    local i = 0
-    while i <= num do 
+    
+    local n = 0
+    
+    while n <= nume do
+        
+        turtle.refuel()
+        
+        local i = 0
+        
+        while i <= num do 
+            turtle.dig()
+            turtle.forward()
+            turtle.dig()
+            print(i)
+            i = i + 1
+        end
+        turtle.digUp()
+        turtle.up()
+        turtle.turnRight()
+        turtle.turnRight()
+
+        i = 0
+
+        while i <= num do 
+            turtle.dig()
+            turtle.forward()
+            turtle.dig()
+            print(i)
+            i = i + 1
+        end
+
+        turtle.down()
+        turtle.turnLeft()
         turtle.dig()
         turtle.forward()
-        turtle.dig()
-        print(i)
-        i = i + 1
-    end
-    turtle.digUp()
-    turtle.up()
-    turtle.turnRight()
-    turtle.turnRight()
-
-    i = 0
-
-    while i <= num do 
-        turtle.dig()
-        turtle.forward()
-        turtle.dig()
-        print(i)
-        i = i + 1
+        turtle.turnLeft()    
     end
 end
 
-mineForward(20)
+
+print("Size?")
+    square = tonumber(read())
+    
+mineForward(square)
 
 
 function findStart()
