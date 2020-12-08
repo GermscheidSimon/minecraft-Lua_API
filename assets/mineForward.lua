@@ -155,6 +155,12 @@ function mineForward(num)
         fuel()
     end
 
+    if y ~= 0 then
+        for i = 1, y do
+        turtle.up()
+        end
+    end
+
 end
 
 print("Size?")
