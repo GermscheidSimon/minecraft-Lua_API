@@ -82,17 +82,16 @@ function mineForward(num)
         turtle.turnLeft()
         turtle.turnLeft()
 
-    end
-
-    if y ~= 0 then
-        for i = 1, y do
-        turtle.down()
+        if y ~= 0 then
+            for i = 1, y do
+            turtle.down()
+            end
         end
-    end
-    turtle.digDown()
-    turtle.down()
+        turtle.digDown()
+        turtle.down()
 
-    y = y + 1
+        y = y + 1
+    end
 
 end
 
