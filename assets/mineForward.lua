@@ -68,6 +68,9 @@ function mineForward(num)
         turtle.drop()
         number = number+1
     end
+    
+    turtle.turnLeft()
+    turtle.turnLeft()
 
 end
 
