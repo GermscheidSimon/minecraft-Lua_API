@@ -43,6 +43,8 @@ function mineForward(num)
         turtle.forward()
         turtle.turnLeft()    
     end
+
+    n = n + 1
 end
 
 
