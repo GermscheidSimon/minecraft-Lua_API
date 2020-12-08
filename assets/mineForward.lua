@@ -52,7 +52,7 @@ function mineForward(num)
 
     turtle.turnLeft()
 
-    while n <= 0 do
+    while n <= num do
         write(n)
 
         turtle.turnLeft()
