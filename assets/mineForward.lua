@@ -10,6 +10,8 @@ function mineForward(num)
     local n = 0
     
     while n <= num do
+
+        write (n)
         
         turtle.refuel()
         
@@ -19,7 +21,6 @@ function mineForward(num)
             turtle.dig()
             turtle.forward()
             turtle.dig()
-            print(i)
             i = i + 1
         end
         turtle.digUp()
@@ -33,7 +34,6 @@ function mineForward(num)
             turtle.dig()
             turtle.forward()
             turtle.dig()
-            print(i)
             i = i + 1
         end
 
@@ -41,10 +41,11 @@ function mineForward(num)
         turtle.turnLeft()
         turtle.dig()
         turtle.forward()
-        turtle.turnLeft()    
-    end
+        turtle.turnLeft() 
 
-    n = n + 1
+        write(n)
+        n = n + 1   
+    end
 end
 
 
