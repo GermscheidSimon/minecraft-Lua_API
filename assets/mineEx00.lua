@@ -102,7 +102,9 @@ function goHome()
   if layers == 1 and place == 0 then
   else
     repeat
-      moveUp()
+      if y ~= home
+        moveUp()
+      end
     until y == home
   end
   if layers == 0 then
