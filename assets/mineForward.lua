@@ -51,16 +51,17 @@ local notItems = {
          end    
       end
   end
-   
-  function compare()
-    compDown()
-    compUp()  
-  end
 
   function fuel()
     if turtle.getFuelLevel() < 50 then
       turtle.refuel()
     end
+  end
+   
+  function compare()
+    compDown()
+    compUp()
+    fuel()  
   end
 
 function mineForward(num)
