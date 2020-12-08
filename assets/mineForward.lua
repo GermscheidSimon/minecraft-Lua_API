@@ -55,7 +55,7 @@ function mineForward(num)
     while n <= num do
         write(n)
 
-        turtle.turnLeft()
+        turtle.forward()
 
         n = n + 1
     end
