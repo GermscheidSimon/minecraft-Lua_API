@@ -43,9 +43,25 @@ function mineForward(num)
         turtle.forward()
         turtle.turnLeft() 
 
-        write(n)
         n = n + 1   
     end
+
+    write("Returning home!")
+
+    n = 0
+
+    turtle.turnLeft()
+
+    while n <= 0 do
+        write(n)
+
+        turtle.turnLeft()
+
+        n = n + 1
+    end
+
+    turtle.turnLeft()
+
 end
 
 
