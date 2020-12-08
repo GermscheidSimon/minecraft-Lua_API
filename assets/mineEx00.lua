@@ -195,13 +195,13 @@ end
  
 function dropItems()
   gohome()
-  returnto()
   local number = 2
   for i = 1, 14 do
     turtle.select(number)
     turtle.drop()
     number = number+1
   end
+  returnto()
 end
  
 function checkItems()
