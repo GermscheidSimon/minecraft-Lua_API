@@ -84,24 +84,19 @@ function mineForward(num)
                 turtle.forward()
                 i = i + 1
             end
+
             compare()
-            turtle.digUp()
-            turtle.up()
-            turtle.turnRight()
-            turtle.turnRight()
 
             i = 0
 
             while i <= num do 
                 compare()
-                turtle.dig()
-                turtle.forward()
+                turtle.back()
                 i = i + 1
             end
 
             compare()
-            turtle.down()
-            turtle.turnLeft()
+            turtle.turnRight()
             turtle.dig()
             turtle.forward()
             turtle.turnLeft() 
