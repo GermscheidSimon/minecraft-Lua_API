@@ -194,7 +194,7 @@ function fuel()
 end
  
 function dropItems()
-  gohome()
+  goHome()
   local number = 2
   for i = 1, 14 do
     turtle.select(number)
