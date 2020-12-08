@@ -148,8 +148,8 @@ function returnto()
   if layers == clayers and place == cplace then
   else
     repeat
-      if y == cy
-        movedown()
+      if y ~= cy
+        moveDown()
       end
     until y == cy
   end
