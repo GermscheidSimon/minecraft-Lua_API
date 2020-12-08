@@ -24,7 +24,7 @@ local notItems = {
             end
             turtle.digDown()
               elseif data.name == notItems[5] then
-                turtle.select(15)
+                turtle.select(16)
                 turtle.placeDown()
               else
             turtle.digDown()      
@@ -44,7 +44,7 @@ local notItems = {
               end
               turtle.digUp()
               elseif data.name== notItems[5] then
-                turtle.select(15)
+                turtle.select(16)
                 turtle.placeUp()
             else
             turtle.digUp()     
