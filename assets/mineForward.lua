@@ -7,73 +7,94 @@ local square = 0 -- size of mine area
 
 function mineForward(num)
     
-    local n = 0
+    while y <= num do
     
-    while n <= num do
+        write(y)
+    
+        local n = 0
+    
+        while n <= num do
 
-        write (n)
+            write (n)
         
-        turtle.refuel()
+            turtle.refuel()
         
-        local i = 0
+            local i = 0
         
-        while i <= num do 
+            while i <= num do 
+                turtle.dig()
+                turtle.forward()
+                turtle.dig()
+                i = i + 1
+            end
+            turtle.digUp()
+            turtle.up()
+            turtle.turnRight()
+            turtle.turnRight()
+
+            i = 0
+
+            while i <= num do 
+                turtle.dig()
+                turtle.forward()
+                turtle.dig()
+                i = i + 1
+            end
+
+            turtle.down()
+            turtle.turnLeft()
             turtle.dig()
             turtle.forward()
-            turtle.dig()
-            i = i + 1
-        end
-        turtle.digUp()
-        turtle.up()
-        turtle.turnRight()
-        turtle.turnRight()
+            turtle.turnLeft() 
 
-        i = 0
-
-        while i <= num do 
-            turtle.dig()
-            turtle.forward()
-            turtle.dig()
-            i = i + 1
+            n = n + 1   
         end
 
-        turtle.down()
+        write("Returning home!")
+
+        n = 0
+
         turtle.turnLeft()
-        turtle.dig()
-        turtle.forward()
-        turtle.turnLeft() 
 
-        n = n + 1   
-    end
+        while n <= num do
+            write(n)
 
-    write("Returning home!")
+            turtle.forward()
 
-    n = 0
+            n = n + 1
+        end
 
-    turtle.turnLeft()
+        turtle.turnLeft()
 
-    while n <= num do
-        write(n)
+        if y ~= 0 then
+            for i = 1, y do
+            turtle.up()
+            end
+        end
 
-        turtle.forward()
-
-        n = n + 1
-    end
-
-    turtle.turnLeft()
-
-    local number = 1
-    for i = 1, 14 do
-        turtle.select(number)
-        turtle.drop()
-        number = number+1
-    end
+        local number = 1
+        for i = 1, 14 do
+            turtle.select(number)
+            turtle.drop()
+            number = number+1
+        end
     
-    turtle.turnLeft()
-    turtle.turnLeft()
+        turtle.turnLeft()
+        turtle.turnLeft()
+
+    end
+
+    if y ~= 0 then
+        for i = 1, y do
+        turtle.down()
+        end
+    end
+    turtle.digDown()
+    turtle.down()
+
+    y = y + 1
 
 end
-
 
 print("Size?")
     square = tonumber(read())
