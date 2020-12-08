@@ -9,7 +9,7 @@ function mineForward(num)
     
     local n = 0
     
-    while n <= nume do
+    while n <= num do
         
         turtle.refuel()
         
