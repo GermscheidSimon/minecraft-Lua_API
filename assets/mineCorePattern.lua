@@ -188,6 +188,19 @@ local notItems = {
     x = x - 1
   end
 
+  function moveup()
+    compare()
+    turtle.up()
+    y = y - 1
+  end
+
+  function movedown()
+    compare()
+    turtle.digDown()
+    turtle.down()
+    y = y + 1
+  end
+
   function moveright()
     turtle.turnRight()
     compare()
@@ -210,16 +223,10 @@ local notItems = {
 
   function coresample()
     for i = 1, square do 
-        compare()
-        turtle.digDown()
-        turtle.down()
-
-        y = y + 1
+        movedown()
     end
     while y < cy do
-        turtle.up()
-
-        y = y - 1
+        moveup()
     end
   end
 
