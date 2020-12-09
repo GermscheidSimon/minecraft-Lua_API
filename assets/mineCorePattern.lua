@@ -14,9 +14,9 @@ local notItems = {
     "minecraft:stone",
     "minecraft:gravel",
     "minecraft:chest",
-    "minecraft:flowing_lava"
+    "minecraft:flowing_lava",
     "minecraft:bedrock"
-      }
+    }
       
   function compDown()
   local succes, data = turtle.inspectDown()
