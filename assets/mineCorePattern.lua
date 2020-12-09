@@ -128,8 +128,8 @@ local notItems = {
   end
 
   function fuel()
-    print("check fuel")
-    write(turtle.getFuelLevel())
+    write("check fuel")
+    print(turtle.getFuelLevel())
     if turtle.getFuelLevel() < 50 then
       turtle.refuel()
     end
