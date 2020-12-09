@@ -227,18 +227,18 @@ local notItems = {
     local ty = y
     local tx = x
     local tz = z
-    if y ~= cy then
-        while y ~= cy do
+    if y ~= 0 then
+        while y ~= 0 do
             moveup()
         end
     end
-    if x ~= cx then
-        while x ~= cx do
+    if x ~= 0 then
+        while x ~= 0 do
             moveBack()
         end
     end
-    if z ~= cz then
-        while z ~= cz do
+    if z ~= 0 then
+        while z ~= 0 do
             moveLeft()
         end
     end
@@ -269,14 +269,14 @@ local notItems = {
 
   function ycycle()
     write("begin y")
-    write(x,y,z)
+    write(x y z)
     coresample()
     checkItems()
   end
 
   function xcycle()
     write("begin x")
-    write(x,y,z)  
+    write(x y z)  
     while x <= square do
         ycycle()
         if x <= square then
@@ -292,7 +292,7 @@ local notItems = {
 
   function zcycle()
     write("begin z")
-    write(x,y,z)
+    write(x y z)
     while z <= square do
         xcycle()
         if x <= square then
