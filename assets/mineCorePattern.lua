@@ -171,7 +171,6 @@ local notItems = {
     comp()
     compLeft()
     compRight()
-    compBack()
     fuel()  
   end
 
@@ -188,6 +187,9 @@ local notItems = {
   end
 
   function moveup()
+    if y ~= cy then
+        compback()
+    end
     turtle.up()
     y = y - 1
   end
