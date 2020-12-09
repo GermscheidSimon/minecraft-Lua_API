@@ -131,6 +131,7 @@ local notItems = {
     write("check fuel")
     print(turtle.getFuelLevel())
     if turtle.getFuelLevel() < 50 then
+      turtle.select(1)
       turtle.refuel()
     end
   end
