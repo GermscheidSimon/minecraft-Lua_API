@@ -129,6 +129,7 @@ local notItems = {
 
   function fuel()
     print("check fuel")
+    write(turtle.getFuelLevel())
     if turtle.getFuelLevel() < 50 then
       turtle.refuel()
     end
