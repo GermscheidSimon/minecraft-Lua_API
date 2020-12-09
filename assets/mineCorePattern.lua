@@ -132,6 +132,7 @@ local notItems = {
     print(turtle.getFuelLevel())
     if turtle.getFuelLevel() < 50 then
         while turtle.getFuelLevel() < 50 do
+            local number = 0
             for i = 0, 16 do
                 turtle.select(number)
                 turtle.refuel(2)
