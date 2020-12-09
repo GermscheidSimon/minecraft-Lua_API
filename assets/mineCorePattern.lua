@@ -19,6 +19,7 @@ local notItems = {
     }
       
   function compDown()
+    Write("look down")
   local succes, data = turtle.inspectDown()
    if succes then
     if data.name == notItems[1] then
@@ -39,6 +40,7 @@ local notItems = {
   end
    
   function compUp()
+    write("look up")
   local succes, data = turtle.inspectUp()
     if succes then
       if data.name == notItems[1] then
@@ -59,6 +61,7 @@ local notItems = {
   end
    
   function comp()
+    write("look forward")
   local succes, data = turtle.inspect()
     if succes then
       if data.name == notItems[1] then
@@ -79,6 +82,7 @@ local notItems = {
   end
    
   function compLeft()
+    Write("look left")
     turtle.turnLeft()
     local succes, data = turtle.inspect()
     if succes then
@@ -101,6 +105,7 @@ local notItems = {
   end
    
   function compRight()
+    Write("look right")
     turtle.turnRight()
     local succes, data = turtle.inspect()
     if succes then
@@ -123,12 +128,14 @@ local notItems = {
   end
 
   function fuel()
+    write("check fuel")
     if turtle.getFuelLevel() < 50 then
       turtle.refuel()
     end
   end
 
   function dropitems()
+    write("drop items")
     turtle.turnLeft()
     turtle.turnLeft()
     local number = 2
@@ -158,6 +165,7 @@ local notItems = {
   end
 
   function moveforward()
+    write("forward")
     compare()
     turtle.dig()
     turtle.forward()
@@ -165,16 +173,19 @@ local notItems = {
   end
 
   function moveBack()
+    write("back")
     turtle.back()
     x = x - 1
   end
 
   function moveup()
+    write("up")
     turtle.up()
     y = y - 1
   end
 
   function movedown()
+    write("down")
     compare()
     turtle.digDown()
     turtle.down()
@@ -182,6 +193,7 @@ local notItems = {
   end
 
   function moveRight()
+    write("right")
     turtle.turnRight()
     compare()
     turtle.dig()
@@ -192,6 +204,7 @@ local notItems = {
   end
 
   function moveLeft()
+    write("left")
     turtle.turnLeft()
     turtle.dig()
     turtle.forward()
@@ -200,16 +213,17 @@ local notItems = {
   end
 
   function coresample()
+    write("going down")
     for i = 1, square do 
         movedown()
     end
-    while y < cy do
+    for i = 1, square do 
         moveup()
     end
   end
 
   function returnto()
-
+    write("return to base")
     local ty = y
     local tx = x
     local tz = z
@@ -230,6 +244,8 @@ local notItems = {
     end
 
     dropitems()
+
+    write("resume mission")
      
     if z ~= tz then
         while z ~= tz do
@@ -246,16 +262,21 @@ local notItems = {
   function checkItems()
     if turtle.getItemDetail(14) == false then
     else
+      write("inventory full")
       returnto()
     end
   end
 
   function ycycle()
+    write("begin y")
+    write(x,y,z)
     coresample()
     checkItems()
   end
 
-  function xcycle()  
+  function xcycle()
+    write("begin x")
+    write(x,y,z)  
     while x <= square do
         ycycle()
         if x <= square then
@@ -270,7 +291,8 @@ local notItems = {
   end
 
   function zcycle()
-
+    write("begin z")
+    write(x,y,z)
     while z <= square do
         xcycle()
         if x <= square then
@@ -286,9 +308,12 @@ local notItems = {
 
 function mineForward(num)
 
+    write("GO!")
+
     zcycle()
     returnto()
-    
+
+    write("Stop!")
 end
 
 print("Size?")
