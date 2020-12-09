@@ -273,7 +273,11 @@ local notItems = {
 
     while z <= square do
         xcycle()
-        moveRight()
+        if x <= square then
+            for i = 1, 3 do
+                moveRight()
+            end
+        end
     end
     while z > cz do
         moveLeft()
