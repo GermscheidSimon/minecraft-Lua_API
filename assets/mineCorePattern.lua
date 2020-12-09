@@ -278,10 +278,8 @@ local notItems = {
   end
 
   function ycycle()
-    while y <= square do
-        coresample()
-        checkItems()
-    end
+    coresample()
+    checkItems()
   end
 
   function xcycle()  
