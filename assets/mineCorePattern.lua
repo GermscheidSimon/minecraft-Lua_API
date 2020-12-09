@@ -188,7 +188,7 @@ local notItems = {
 
   function moveup()
     if y ~= cy then
-        compback()
+        compBack()
     end
     turtle.up()
     y = y - 1
