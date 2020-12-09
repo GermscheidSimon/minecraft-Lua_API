@@ -121,30 +121,6 @@ local notItems = {
       end
     turtle.turnLeft()
   end
-   
-  function compBack()
-    turtle.turnLeft()
-    turtle.turnLeft()
-  local succes, data = turtle.inspect()
-    if succes then
-      if data.name == notItems[1] then
-        elseif data.name == notItems[2] then
-          elseif data.name == notItems[3] then
-            elseif data.name == notItems[4] then
-              for i = 1, 27 do
-                turtle.suck()
-              end
-              turtle.dig()
-              elseif data.name== notItems[5] then
-                turtle.select(16)
-                turtle.place()
-            else
-            turtle.dig()     
-         end    
-      end
-    turtle.turnLeft()
-    turtle.turnLeft()
-  end
 
   function fuel()
     if turtle.getFuelLevel() < 50 then
@@ -187,9 +163,6 @@ local notItems = {
   end
 
   function moveup()
-    if y ~= cy then
-        compBack()
-    end
     turtle.up()
     y = y - 1
   end
@@ -209,7 +182,7 @@ local notItems = {
     y = y + 1
   end
 
-  function moveright()
+  function moveRight()
     turtle.turnRight()
     compare()
     turtle.dig()
