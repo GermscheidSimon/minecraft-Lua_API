@@ -189,7 +189,6 @@ local notItems = {
   end
 
   function moveup()
-    compare()
     turtle.up()
     y = y - 1
   end
@@ -289,7 +288,7 @@ local notItems = {
     while x <= square do
         ycycle()
         if x <= square then
-            for i = 0, 3 do
+            for i = 1, 3 do
                 moveforward()
             end
         end
