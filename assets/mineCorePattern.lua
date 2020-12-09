@@ -102,7 +102,7 @@ local notItems = {
    
   function compRight()
     turtle.turnRight()
-  local succes, data = turtle.inspect()
+    local succes, data = turtle.inspect()
     if succes then
       if data.name == notItems[1] then
         elseif data.name == notItems[2] then
