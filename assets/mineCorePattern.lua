@@ -19,7 +19,7 @@ local notItems = {
     }
       
   function compDown()
-    Write("look down")
+    write("look down")
   local succes, data = turtle.inspectDown()
    if succes then
     if data.name == notItems[1] then
@@ -82,7 +82,7 @@ local notItems = {
   end
    
   function compLeft()
-    Write("look left")
+    write("look left")
     turtle.turnLeft()
     local succes, data = turtle.inspect()
     if succes then
@@ -105,7 +105,7 @@ local notItems = {
   end
    
   function compRight()
-    Write("look right")
+    write("look right")
     turtle.turnRight()
     local succes, data = turtle.inspect()
     if succes then
