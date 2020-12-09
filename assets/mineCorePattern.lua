@@ -230,7 +230,7 @@ local notItems = {
     local tz = z
     if y ~= cy then
         while y ~= cy do
-            moveup()
+            turtle.up()
         end
     end
     if x ~= cx then
