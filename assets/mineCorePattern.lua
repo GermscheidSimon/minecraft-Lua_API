@@ -78,7 +78,7 @@ local notItems = {
       end
   end
    
-  function compleft()
+  function compLeft()
     turtle.turnLeft()
     local succes, data = turtle.inspect()
     if succes then
