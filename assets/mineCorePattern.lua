@@ -300,7 +300,7 @@ local notItems = {
     write(z)
     while z <= square do
         xcycle()
-        if x <= square then
+        if z <= square then
             for i = 1, 3 do
                 moveRight()
             end
