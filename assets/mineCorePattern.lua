@@ -195,7 +195,13 @@ local notItems = {
   end
 
   function movedown()
-    compare()
+    if x ~= 0 then
+        if z ~= 0 then
+            if y ~= 0 then
+                compare()
+            end
+        end
+    end
     turtle.digDown()
     turtle.down()
     y = y + 1
