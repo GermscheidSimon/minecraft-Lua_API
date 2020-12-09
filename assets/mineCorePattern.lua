@@ -128,7 +128,7 @@ local notItems = {
   end
 
   function fuel()
-    write("check fuel")
+    write("check fuel ")
     print(turtle.getFuelLevel())
     if turtle.getFuelLevel() < 50 then
         while turtle.getFuelLevel() < 50 do
@@ -138,6 +138,9 @@ local notItems = {
                 number = number+1
             end
         end
+
+        write("new fuel level ")
+        print(turtle.getFuelLevel())
     end
   end
 
