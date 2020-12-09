@@ -227,18 +227,18 @@ local notItems = {
     local ty = y
     local tx = x
     local tz = z
-    if y ~= 0 then
-        while y ~= 0 do
+    if y ~= cy then
+        while y > cy do
             moveup()
         end
     end
-    if x ~= 0 then
-        while x ~= 0 do
+    if x ~= cx then
+        while x > cx do
             moveBack()
         end
     end
-    if z ~= 0 then
-        while z ~= 0 do
+    if z ~= cz then
+        while z > cz do
             moveLeft()
         end
     end
@@ -248,13 +248,18 @@ local notItems = {
     write("resume mission")
      
     if z ~= tz then
-        while z ~= tz do
+        while z < tz do
             moveRight()
         end
     end
     if x ~= tx then
-        while x ~= tx do
+        while x < tx do
             moveforward()
+        end
+    end
+    if y ~= ty then
+        while y < ty do
+            movedown()
         end
     end
   end
@@ -311,7 +316,6 @@ function mineForward(num)
     write("GO!")
 
     zcycle()
-    returnto()
 
     write("Stop!")
 end
