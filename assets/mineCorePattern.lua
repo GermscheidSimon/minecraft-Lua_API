@@ -269,14 +269,14 @@ local notItems = {
 
   function ycycle()
     write("begin y")
-    write(x y z)
+    write(y) 
     coresample()
     checkItems()
   end
 
   function xcycle()
     write("begin x")
-    write(x y z)  
+    write(x)  
     while x <= square do
         ycycle()
         if x <= square then
@@ -292,7 +292,7 @@ local notItems = {
 
   function zcycle()
     write("begin z")
-    write(x y z)
+    write(z)
     while z <= square do
         xcycle()
         if x <= square then
