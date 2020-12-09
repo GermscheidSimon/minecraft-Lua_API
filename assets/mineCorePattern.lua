@@ -151,9 +151,9 @@ local notItems = {
       comp()
       turtle.turnLeft()
       turtle.turnLeft()
+      compLeft()
+      compRight()
     end
-    compLeft()
-    compRight()
     fuel()  
   end
 
