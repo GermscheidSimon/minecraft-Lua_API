@@ -148,7 +148,7 @@ local notItems = {
     if y ~= 0 and x ~=0 and z ~= 0 then
       turtle.turnLeft()
       turtle.turnLeft()
-      compt()
+      comp()
       turtle.turnLeft()
       turtle.turnLeft()
     end
