@@ -145,6 +145,13 @@ local notItems = {
     compDown()
     compUp()
     comp()
+    if y ~= 0 and x ~=0 and z ~= 0 then
+      turtle.turnLeft()
+      turtle.turnLeft()
+      compt()
+      turtle.turnLeft()
+      turtle.turnLeft()
+    end
     compLeft()
     compRight()
     fuel()  
@@ -157,7 +164,7 @@ local notItems = {
     x = x + 1
   end
 
-  function moveback()
+  function moveBack()
     turtle.back()
     x = x - 1
   end
@@ -168,15 +175,7 @@ local notItems = {
   end
 
   function movedown()
-    if x ~= 0 then
-        if z ~= 0 then
-            if y ~= 0 then
-                compare()
-            end
-            compare()
-        end
-        compare()
-    end
+    compare()
     turtle.digDown()
     turtle.down()
     y = y + 1
@@ -221,7 +220,7 @@ local notItems = {
     end
     if x ~= cx then
         while x ~= cx do
-            moveback()
+            moveBack()
         end
     end
     if z ~= cz then
@@ -266,7 +265,7 @@ local notItems = {
         end
     end
     while x > cx do
-        moveback()
+        moveBack()
     end
   end
 
