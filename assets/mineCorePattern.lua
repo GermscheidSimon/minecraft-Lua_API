@@ -132,7 +132,7 @@ local notItems = {
     print(turtle.getFuelLevel())
     if turtle.getFuelLevel() < 50 then
       turtle.select(1)
-      turtle.refuel()
+      turtle.refuel(2)
     end
   end
 
