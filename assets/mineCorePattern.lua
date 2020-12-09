@@ -287,7 +287,7 @@ local notItems = {
     while x <= square do
         ycycle()
         if x <= square then
-            for i = 1, 3 do
+            for i = 1, 2 do
                 moveforward()
             end
         end
@@ -303,7 +303,7 @@ local notItems = {
     while z <= square do
         xcycle()
         if z <= square then
-            for i = 1, 3 do
+            for i = 1, 2 do
                 moveRight()
             end
         end
