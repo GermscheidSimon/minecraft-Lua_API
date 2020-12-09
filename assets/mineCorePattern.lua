@@ -183,7 +183,6 @@ local notItems = {
   end
 
   function moveback()
-    compare()
     turtle.back()
     x = x - 1
   end
@@ -199,7 +198,9 @@ local notItems = {
             if y ~= 0 then
                 compare()
             end
+            compare()
         end
+        compare()
     end
     turtle.digDown()
     turtle.down()
@@ -218,12 +219,10 @@ local notItems = {
 
   function moveLeft()
     turtle.turnLeft()
-    compare()
     turtle.dig()
     turtle.forward()
     z = z - 1
     turtle.turnRight()
-    compare()
   end
 
   function coresample()
