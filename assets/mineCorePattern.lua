@@ -186,6 +186,12 @@ end
     print("back")
     if turtle.back() then
         findme()
+    else
+        turtle.turnLeft()
+        turtle.turnLeft()
+        turtle.dig()
+        turtle.turnLeft()
+        turtle.turnLeft()
     end
   end
 
@@ -193,6 +199,8 @@ end
     print("up")
     if turtle.up() then
         findme()
+    else
+        turtle.digUp()
     end
   end
 
