@@ -1,12 +1,3 @@
-local y = 0 -- updown
-local x = 0 -- forward
-local z = 0 -- side-side
-
-local cy = 0 -- current y
-local cx = 0 -- current x
-local cz = 0 -- current z
-
-
 local square = 0 -- size of mine area
 
 local notItems = {
@@ -17,6 +8,28 @@ local notItems = {
     "minecraft:flowing_lava",
     "minecraft:bedrock"
     }
+
+function findme()
+    while not x then do
+        local x, y, z = gps.locate(5)
+    end
+    print("I am at (" .. x .. ", " .. y .. ", " .. z .. ")")
+    local position = vector.new(x, y, z)
+end
+
+function sethome()
+    while not x then do
+        local cx, cy, cz = gps.locate(5)
+    end
+    local home = vector.new(cx, cy, cz)
+end
+
+function setendvec()
+   local ex = cx + sqaure
+   local ey = cy + square
+   local ez = cz + square
+   local dest = vector.new(ex, ey, ez)
+end
       
   function compDown()
     print("look down")
@@ -323,6 +336,8 @@ local notItems = {
   end
 
 function mineForward(num)
+
+    findme()
 
     print("GO!")
 
