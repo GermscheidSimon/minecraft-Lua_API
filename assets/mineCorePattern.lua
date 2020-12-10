@@ -1,17 +1,23 @@
 local x = 0
 local y = 0 
 local z = 0
+local position = vector.new(x, y, z) -- current vector
+
 local cx = 0
 local cy = 0
 local cz = 0
+local home = vector.new(cx, cy, cz) -- home vector
+
 local ex = 0
 local ey = 0
 local ez = 0
+local dest = vector.new(ex, ey, ez) -- destination vector
+
 
 local square = 0 -- size of mine area
 
-local notItems = {
-    "minecraft:dirt",
+local notI
+dest = vector.new(ex, ey, ez)
     "minecraft:stone",
     "minecraft:gravel",
     "minecraft:chest",
@@ -21,9 +27,8 @@ local notItems = {
 function findme()
     x, y, z = gps.locate(5)
     print("I am at (" .. x .. ", " .. y .. ", " .. z .. ")")
-    local position = vector.new(x, y, z)
-    local home = vector.new(cx, cy, cz)
-    local dest = vector.new(ex, ey, ez)
+    
+    position = vector.new(x, y, z)
 
     local tohome = position - home
     local todest = position - dest
@@ -34,12 +39,16 @@ end
 
 function sethome()
     cx, cy, cz = gps.locate(5)
+
+    home = vector.new(cx, cy, cz)
 end
 
 function setendvec()
    ex = cx + square
    ey = cy + square
    ez = cz + square
+
+   dest = vector.new(ex, ey, ez)
 end
       
   function compDown()
