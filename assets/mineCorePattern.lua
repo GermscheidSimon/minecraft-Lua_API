@@ -18,7 +18,7 @@ local square = 0 -- size of mine area
 
 local notItems = {
     "minecraft:dirt",
-    "minecraft:grass_block",
+    "minecraft:grass",
     "minecraft:stone",
     "minecraft:gravel",
     "minecraft:chest",
