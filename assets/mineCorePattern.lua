@@ -178,12 +178,12 @@ end
     comp()
     if y ~= 0 then
       turtle.turnLeft()
+      comp()
       turtle.turnLeft()
       comp()
       turtle.turnLeft()
+      comp()
       turtle.turnLeft()
-      compLeft()
-      compRight()
     end
     fuel()  
   end
@@ -193,19 +193,19 @@ end
     compare()
     turtle.dig()
     turtle.forward()
-    x = x + 1
+    findme()
   end
 
   function moveBack()
     print("back")
     turtle.back()
-    x = x - 1
+    findme()
   end
 
   function moveup()
     print("up")
     turtle.up()
-    y = y - 1
+    findme()
   end
 
   function movedown()
@@ -213,7 +213,7 @@ end
     compare()
     turtle.digDown()
     turtle.down()
-    y = y + 1
+    findme()
   end
 
   function moveRight()
@@ -222,7 +222,7 @@ end
     compare()
     turtle.dig()
     turtle.forward()
-    z = z + 1
+    findme()
     turtle.turnLeft()
     compare()
   end
@@ -232,7 +232,7 @@ end
     turtle.turnLeft()
     turtle.dig()
     turtle.forward()
-    z = z - 1
+    findme()
     turtle.turnRight()
   end
 
@@ -252,7 +252,7 @@ end
     local tx = x
     local tz = z
     if y ~= cy then
-        while y > cy do
+        while y < cy do
             moveup()
         end
     end
@@ -282,7 +282,7 @@ end
         end
     end
     if y ~= ty then
-        while y < ty do
+        while y > ty do
             movedown()
         end
     end
@@ -306,9 +306,9 @@ end
   function xcycle()
     print("begin x")
     print(x)  
-    while x <= square do
+    while x <= ex do
         ycycle()
-        if x <= square then
+        if x <= ex then
             for i = 1, 2 do
                 moveforward()
             end
@@ -322,9 +322,9 @@ end
   function zcycle()
     print("begin z")
     print(z)
-    while z <= square do
+    while z <= ez do
         xcycle()
-        if z <= square then
+        if z <= ez then
             for i = 1, 2 do
                 moveRight()
             end
