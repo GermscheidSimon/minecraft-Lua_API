@@ -25,7 +25,14 @@ local notItems = {
       }
 
 function findme()
-    x, y, z = gps.locate(5)
+    local tx, ty, tz = gps.locate(5)
+    if not tx then
+        print("Lost Signal")
+        x = ex
+        print("reset mode")
+    else
+        x, y, z = gps.locate(5)
+    end        
     print("I am at (" .. x .. ", " .. y .. ", " .. z .. ")")
     
     position = vector.new(x, y, z)
@@ -340,7 +347,7 @@ end
   function xcycle()
     print("begin x")
     print(x)  
-    while x <= ex do
+    while x < ex do
         ycycle()
         if x <= ex then
             for i = 1, 2 do
@@ -356,7 +363,7 @@ end
   function zcycle()
     print("begin z")
     print(z)
-    while z <= ez do
+    while z < ez do
         xcycle()
         if z <= ez then
             for i = 1, 2 do
