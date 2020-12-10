@@ -1,17 +1,17 @@
 local x = 0
 local y = 0 
 local z = 0
-local position = vector.new(x, y, z) -- current vector
+local position = vector.new(x, y, z) -- current vector initilization
 
 local cx = 0
 local cy = 0
 local cz = 0
-local home = vector.new(cx, cy, cz) -- home vector
+local home = vector.new(cx, cy, cz) -- home vector initilization
 
 local ex = 0
 local ey = 0
 local ez = 0
-local dest = vector.new(ex, ey, ez) -- destination vector
+local dest = vector.new(ex, ey, ez) -- destination vector initilization
 
 
 local square = 0 -- size of mine area
