@@ -15,8 +15,7 @@ local notItems = {
     "minecraft:stone",
     "minecraft:gravel",
     "minecraft:chest",
-    "minecraft:flowing_lava",
-    "minecraft:bedrock"
+    "minecraft:flowing_lava"
     }
 
 function findme()
