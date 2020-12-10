@@ -52,7 +52,7 @@ end
 
 function setendvec()
    ex = cx + square
-   ey = cy + square
+   ey = 3
    ez = cz + square
 
    dest = vector.new(ex, ey, ez)
