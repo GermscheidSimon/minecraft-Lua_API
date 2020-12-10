@@ -10,7 +10,7 @@ local notItems = {
     }
 
 function findme()
-    while not x then do
+    while not x do
         local x, y, z = gps.locate(5)
     end
     print("I am at (" .. x .. ", " .. y .. ", " .. z .. ")")
@@ -18,7 +18,7 @@ function findme()
 end
 
 function sethome()
-    while not x then do
+    while not x do
         local cx, cy, cz = gps.locate(5)
     end
     local home = vector.new(cx, cy, cz)
@@ -243,6 +243,14 @@ end
     end
     for i = 1, square do 
         moveup()
+    end
+    while y ~= cy do
+        if y < cy then
+            moveup()
+        end
+        if y > cy then
+            movedown()
+        end
     end
   end
 
