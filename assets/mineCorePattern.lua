@@ -199,25 +199,22 @@ end
     compare()
     turtle.dig()
     if turtle.forward() then
-    turtle.forward()
+        findme()
     end
-    findme()
   end
 
   function moveBack()
     print("back")
     if turtle.back() then
-    turtle.back()
+        findme()
     end
-    findme()
   end
 
   function moveup()
     print("up")
     if turtle.up() then
-    turtle.up()
+        findme()
     end
-    findme()
   end
 
   function movedown()
@@ -225,9 +222,8 @@ end
     compare()
     turtle.digDown()
     if turtle.down() then
-    turtle.down()
+        findme()
     end
-    findme()
   end
 
   function moveRight()
@@ -236,9 +232,8 @@ end
     compare()
     turtle.dig()
     if turtle.forward() then
-        turtle.forward()
+        findme()
     end
-    findme()
     turtle.turnLeft()
     compare()
   end
@@ -248,9 +243,8 @@ end
     turtle.turnLeft()
     turtle.dig()
     if turtle.forward() then
-        turtle.forward()
+        findme()
     end
-    findme()
     turtle.turnRight()
   end
 
