@@ -229,10 +229,10 @@ end
 
   function coresample()
     print("going down")
-    for i = 1, ey do 
+    for i = 1, y do 
         movedown()
     end
-    for i = 1, ey do 
+    for i = 1, y do 
         moveup()
     end
     while y ~= cy do
