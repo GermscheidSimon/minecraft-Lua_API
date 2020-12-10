@@ -31,7 +31,7 @@ function sethome()
 end
 
 function setendvec()
-   ex = cx + sqaure
+   ex = cx + square
    ey = cy + square
    ez = cz + square
    local dest = vector.new(ex, ey, ez)
