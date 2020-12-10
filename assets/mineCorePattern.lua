@@ -16,13 +16,13 @@ local dest = vector.new(ex, ey, ez) -- destination vector initilization
 
 local square = 0 -- size of mine area
 
-local notI
-dest = vector.new(ex, ey, ez)
+local notItems = {
+    "minecraft:dirt",
     "minecraft:stone",
     "minecraft:gravel",
     "minecraft:chest",
     "minecraft:flowing_lava"
-    }
+      }
 
 function findme()
     x, y, z = gps.locate(5)
