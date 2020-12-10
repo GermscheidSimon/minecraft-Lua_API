@@ -1,3 +1,13 @@
+local x = 0
+local y = 0 
+local z = 0
+local cx = 0
+local cy = 0
+local cz = 0
+local ex = 0
+local ey = 0
+local ez = 0
+
 local square = 0 -- size of mine area
 
 local notItems = {
@@ -10,20 +20,20 @@ local notItems = {
     }
 
 function findme()
-    local x, y, z = gps.locate(5)
+    x, y, z = gps.locate(5)
     print("I am at (" .. x .. ", " .. y .. ", " .. z .. ")")
     local position = vector.new(x, y, z)
 end
 
 function sethome()
-    local cx, cy, cz = gps.locate(5)
+    cx, cy, cz = gps.locate(5)
     local home = vector.new(cx, cy, cz)
 end
 
 function setendvec()
-   local ex = cx + sqaure
-   local ey = cy + square
-   local ez = cz + square
+   ex = cx + sqaure
+   ey = cy + square
+   ez = cz + square
    local dest = vector.new(ex, ey, ez)
    print("(" .. ex .. ", " .. ey .. ", " .. ez .. ")")
 end
