@@ -183,7 +183,7 @@ end
     compDown()
     compUp()
     comp()
-    if y ~= 0 then
+    if y ~= cy then
       turtle.turnLeft()
       comp()
       turtle.turnLeft()
