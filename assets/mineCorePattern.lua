@@ -31,7 +31,7 @@ function findme()
     position = vector.new(x, y, z)
 
     local tohome = position - home
-    local todest = position - dest
+    local todest = dest - position
 
     print("I am ", tostring(tohome), " away from home!")
     print("I am ", tostring(todest), " away from end!")
@@ -371,8 +371,8 @@ end
 
 function mineForward(num)
 
-    setendvec()
     sethome()
+    setendvec()
     findme()    
 
     print("GO!")
