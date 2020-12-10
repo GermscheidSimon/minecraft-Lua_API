@@ -18,6 +18,7 @@ local square = 0 -- size of mine area
 
 local notItems = {
     "minecraft:dirt",
+    "minecraft:grass_block",
     "minecraft:stone",
     "minecraft:gravel",
     "minecraft:chest",
@@ -66,106 +67,109 @@ end
       elseif data.name == notItems[2] then
         elseif data.name == notItems[3] then  
           elseif data.name == notItems[4] then
-            for i = 1, 27 do
-              turtle.suckDown()
-            end
-            turtle.digDown()
               elseif data.name == notItems[5] then
-                turtle.select(16)
-                turtle.placeDown()
-              else
-            turtle.digDown()      
+                for i = 1, 27 do
+                  turtle.suckDown()
+                end
+                turtle.digDown()
+                elseif data.name == notItems[6] then
+                    turtle.select(16)
+                    turtle.placeDown()
+                else
+                turtle.digDown()      
         end
      end
   end
    
   function compUp()
     print("look up")
-  local succes, data = turtle.inspectUp()
+    local succes, data = turtle.inspectDown()
     if succes then
-      if data.name == notItems[1] then
-        elseif data.name == notItems[2] then
-          elseif data.name == notItems[3] then
-            elseif data.name == notItems[4] then
-              for i = 1, 27 do
-                turtle.suckUp()
-              end
-              turtle.digUp()
-              elseif data.name== notItems[5] then
-                turtle.select(16)
-                turtle.placeUp()
-            else
-            turtle.digUp()     
-         end    
+     if data.name == notItems[1] then
+       elseif data.name == notItems[2] then
+         elseif data.name == notItems[3] then  
+           elseif data.name == notItems[4] then
+               elseif data.name == notItems[5] then
+                 for i = 1, 27 do
+                   turtle.suckDown()
+                 end
+                 turtle.digDown()
+                 elseif data.name == notItems[6] then
+                     turtle.select(16)
+                     turtle.placeDown()
+                 else
+                 turtle.digDown()   
+         end
       end
-  end
+   end
    
   function comp()
     print("look forward")
-  local succes, data = turtle.inspect()
+    local succes, data = turtle.inspectDown()
     if succes then
-      if data.name == notItems[1] then
-        elseif data.name == notItems[2] then
-          elseif data.name == notItems[3] then
-            elseif data.name == notItems[4] then
-              for i = 1, 27 do
-                turtle.suck()
-              end
-              turtle.dig()
-              elseif data.name== notItems[5] then
-                turtle.select(16)
-                turtle.place()
-            else
-            turtle.dig()     
-         end    
+     if data.name == notItems[1] then
+       elseif data.name == notItems[2] then
+         elseif data.name == notItems[3] then  
+           elseif data.name == notItems[4] then
+               elseif data.name == notItems[5] then
+                 for i = 1, 27 do
+                   turtle.suckDown()
+                 end
+                 turtle.digDown()
+                 elseif data.name == notItems[6] then
+                     turtle.select(16)
+                     turtle.placeDown()
+                 else
+                 turtle.digDown()     
+         end
       end
-  end
+   end
    
   function compLeft()
     print("look left")
     turtle.turnLeft()
-    local succes, data = turtle.inspect()
+    local succes, data = turtle.inspectDown()
     if succes then
-      if data.name == notItems[1] then
-        elseif data.name == notItems[2] then
-          elseif data.name == notItems[3] then
-            elseif data.name == notItems[4] then
-              for i = 1, 27 do
-                turtle.suck()
-              end
-              turtle.dig()
-              elseif data.name== notItems[5] then
-                turtle.select(16)
-                turtle.place()
-            else
-            turtle.dig()     
-         end    
+     if data.name == notItems[1] then
+       elseif data.name == notItems[2] then
+         elseif data.name == notItems[3] then  
+           elseif data.name == notItems[4] then
+               elseif data.name == notItems[5] then
+                 for i = 1, 27 do
+                   turtle.suckDown()
+                 end
+                 turtle.digDown()
+                 elseif data.name == notItems[6] then
+                    turtle.select(16)
+                    turtle.placeDown()
+                 else
+                 turtle.digDown()      
+         end
       end
-    turtle.turnRight()
-  end
+   end
    
   function compRight()
     print("look right")
     turtle.turnRight()
-    local succes, data = turtle.inspect()
+    local succes, data = turtle.inspectDown()
     if succes then
-      if data.name == notItems[1] then
-        elseif data.name == notItems[2] then
-          elseif data.name == notItems[3] then
-            elseif data.name == notItems[4] then
-              for i = 1, 27 do
-                turtle.suck()
-              end
-              turtle.dig()
-              elseif data.name== notItems[5] then
-                turtle.select(16)
-                turtle.place()
-            else
-            turtle.dig()     
-         end    
+     if data.name == notItems[1] then
+       elseif data.name == notItems[2] then
+         elseif data.name == notItems[3] then  
+           elseif data.name == notItems[4] then
+               elseif data.name == notItems[5] then
+                 for i = 1, 27 do
+                   turtle.suckDown()
+                 end
+                 turtle.digDown()
+                 elseif data.name == notItems[6] then
+                    turtle.select(16)
+                    turtle.placeDown()
+                 else
+                 turtle.digDown()      
+         end
       end
-    turtle.turnLeft()
-  end
+   end
 
   function fuel()
     write("check fuel ")
