@@ -25,6 +25,7 @@ function setendvec()
    local ey = cy + square
    local ez = cz + square
    local dest = vector.new(ex, ey, ez)
+   print("(" .. ex .. ", " .. ey .. ", " .. ez .. ")")
 end
       
   function compDown()
