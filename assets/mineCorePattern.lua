@@ -22,19 +22,24 @@ function findme()
     x, y, z = gps.locate(5)
     print("I am at (" .. x .. ", " .. y .. ", " .. z .. ")")
     local position = vector.new(x, y, z)
+    local home = vector.new(cx, cy, cz)
+    local dest = vector.new(ex, ey, ez)
+
+    local tohome = position - home
+    local todest = position - dest
+
+    print("I am ", tostring(tohome), " away from home!")
+    print("I am ", tostring(todest), " away from end!")
 end
 
 function sethome()
     cx, cy, cz = gps.locate(5)
-    local home = vector.new(cx, cy, cz)
 end
 
 function setendvec()
    ex = cx + square
    ey = cy + square
    ez = cz + square
-   local dest = vector.new(ex, ey, ez)
-   print("(" .. ex .. ", " .. ey .. ", " .. ez .. ")")
 end
       
   function compDown()
@@ -357,9 +362,9 @@ end
 
 function mineForward(num)
 
-    findme()
+    setendvec()
     sethome()
-    setendvec()    
+    findme()    
 
     print("GO!")
 
