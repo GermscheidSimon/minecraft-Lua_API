@@ -214,7 +214,7 @@ end
 
   function moveup()
     print("up")
-    if turtle.back() then
+    if turtle.up() then
     turtle.up()
     end
     findme()
