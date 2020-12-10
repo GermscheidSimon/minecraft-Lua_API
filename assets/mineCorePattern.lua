@@ -342,6 +342,8 @@ end
 function mineForward(num)
 
     findme()
+    sethome()
+    setendvec()    
 
     print("GO!")
 
