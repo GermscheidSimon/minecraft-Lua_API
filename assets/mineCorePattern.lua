@@ -133,8 +133,10 @@ end
         while turtle.getFuelLevel() < 50 do
             local number = 1
             for i = 1, 16 do
-                turtle.select(number)
-                turtle.refuel(2)
+                if turtle.getFuelLevel() < 50 then
+                    turtle.select(number)
+                    turtle.refuel()
+                end
                 number = number+1
             end
         end
