@@ -165,8 +165,8 @@ end
     print("drop items")
     turtle.turnLeft()
     turtle.turnLeft()
-    local number = 2
-    for i = 1, 14 do
+    local number = 1
+    for i = 1, 16 do
         turtle.select(number)
         turtle.drop()
         number = number+1
