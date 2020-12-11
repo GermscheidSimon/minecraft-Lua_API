@@ -13,7 +13,7 @@ local ey = 0
 local ez = 0
 local dest = vector.new(ex, ey, ez) -- destination vector initilization
 
-local fuelcosttohome = 1 -- How many moves to get back to home
+local fuelcosttohome = 0 -- How many moves to get back to home
 
 
 local square = 0 -- size of mine area
@@ -136,7 +136,7 @@ end
     local ay = math.abs(cy-y)
     local az = math.abs(z-cz)
 
-    fuelcosttohome = ax + ay + az
+    fuelcosttohome = 1 + ax + ay + az
 
     print("needed")
     print(fuelcosttohome)
@@ -145,7 +145,7 @@ end
         while turtle.getFuelLevel() < 50 do
             local number = 1
             for i = 1, 16 do
-                if turtle.getFuelLevel() < fuelcosttohome + 1 then
+                if turtle.getFuelLevel() < fuelcosttohome then
                     turtle.select(number)
                     turtle.refuel()
                 end
