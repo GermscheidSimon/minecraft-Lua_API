@@ -138,14 +138,14 @@ end
 
     fuelcosttohome = ax + ay + az
 
-    print("cost")
+    print("needed")
     print(fuelcosttohome)
 
     if turtle.getFuelLevel() < fuelcosttohome then
         while turtle.getFuelLevel() < 50 do
             local number = 1
             for i = 1, 16 do
-                if turtle.getFuelLevel() < fuelcosttohome then
+                if turtle.getFuelLevel() < fuelcosttohome + 1 then
                     turtle.select(number)
                     turtle.refuel()
                 end
