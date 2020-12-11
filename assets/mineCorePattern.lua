@@ -43,7 +43,7 @@ function findme()
 
     print("I am ", tostring(tohome), " away from home!")
     print("I am ", tostring(todest), " away from end!")
-    function fuel()
+    fuel()
 end
 
 function sethome()
