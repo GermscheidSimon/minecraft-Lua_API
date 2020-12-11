@@ -13,6 +13,8 @@ local ey = 0
 local ez = 0
 local dest = vector.new(ex, ey, ez) -- destination vector initilization
 
+local fuelcosttohome = 0 -- How many moves to get back to home
+
 
 local square = 0 -- size of mine area
 
@@ -40,6 +42,12 @@ function findme()
 
     local tohome = position - home
     local todest = dest - position
+
+    local ax = math.abs(x-cx)
+    local ay = math.abs(cy-y)
+    local az = math.abs(z-cz)
+
+    fuelcosttohome = ax + ay + az
 
     print("I am ", tostring(tohome), " away from home!")
     print("I am ", tostring(todest), " away from end!")
@@ -129,11 +137,11 @@ end
   function fuel()
     write("check fuel ")
     print(turtle.getFuelLevel())
-    if turtle.getFuelLevel() < 50 then
+    if turtle.getFuelLevel() < fuelcosttohome then
         while turtle.getFuelLevel() < 50 do
             local number = 1
             for i = 1, 16 do
-                if turtle.getFuelLevel() < 50 then
+                if turtle.getFuelLevel() < fuelcosttohome then
                     turtle.select(number)
                     turtle.refuel()
                 end
