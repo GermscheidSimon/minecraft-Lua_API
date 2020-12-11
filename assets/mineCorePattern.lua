@@ -50,7 +50,7 @@ function findme()
     fuelcosttohome = ax + ay + az
 
     print("cost")
-    print(fuelcosttohome)
+    print(ax)
 
     print("I am ", tostring(tohome), " away from home!")
     print("I am ", tostring(todest), " away from end!")
