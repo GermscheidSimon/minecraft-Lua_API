@@ -13,7 +13,7 @@ local ey = 0
 local ez = 0
 local dest = vector.new(ex, ey, ez) -- destination vector initilization
 
-local fuelcosttohome = 0 -- How many moves to get back to home
+local fuelcosttohome = 1 -- How many moves to get back to home
 
 
 local square = 0 -- size of mine area
