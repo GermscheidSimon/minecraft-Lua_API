@@ -209,7 +209,6 @@ end
     compare()
     turtle.digDown()
     if turtle.down() then
-        turtle.down()
         findme()
     end
   end
