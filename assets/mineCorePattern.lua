@@ -151,6 +151,9 @@ end
                 end
                 number = number+1
             end
+            if turtle.getFuelLevel() < fuelcosttohome then
+                returnto()
+            end
         end
 
         write("new fuel level ")
