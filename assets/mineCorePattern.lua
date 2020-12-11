@@ -43,15 +43,6 @@ function findme()
     local tohome = position - home
     local todest = dest - position
 
-    local ax = math.abs(x-cx)
-    local ay = math.abs(cy-y)
-    local az = math.abs(z-cz)
-
-    fuelcosttohome = ax + ay + az
-
-    print("cost")
-    print(ax)
-
     print("I am ", tostring(tohome), " away from home!")
     print("I am ", tostring(todest), " away from end!")
     fuel()
@@ -140,6 +131,16 @@ end
   function fuel()
     write("check fuel ")
     print(turtle.getFuelLevel())
+
+    local ax = math.abs(x-cx)
+    local ay = math.abs(cy-y)
+    local az = math.abs(z-cz)
+
+    fuelcosttohome = ax + ay + az
+
+    print("cost")
+    print(fuelcosttohome)
+
     if turtle.getFuelLevel() < fuelcosttohome then
         while turtle.getFuelLevel() < 50 do
             local number = 1
