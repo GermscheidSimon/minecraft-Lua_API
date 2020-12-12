@@ -26,6 +26,41 @@ local notItems = {
     "minecraft:chest",
     "minecraft:flowing_lava"
       }
+  
+   
+  function fuel()
+    write("check fuel ")
+    print(turtle.getFuelLevel())
+
+    local ax = math.abs(x-cx)
+    local ay = math.abs(cy-y)
+    local az = math.abs(cz-z)
+
+    fuelcosttohome = 1 + ax + ay + az
+
+    print("needed")
+    print(fuelcosttohome)
+
+    if turtle.getFuelLevel() < fuelcosttohome then
+        while turtle.getFuelLevel() < 50 do
+            local number = 1
+            for i = 1, 16 do
+                if turtle.getFuelLevel() < fuelcosttohome then
+                    turtle.select(number)
+                    turtle.refuel()
+                end
+                number = number+1
+            end
+            if turtle.getFuelLevel() < fuelcosttohome then
+              write("Running out of fuel")
+              goHome()
+            end
+        end
+
+        write("new fuel level ")
+        print(turtle.getFuelLevel())
+    end
+  end
 
 function findme()
     local tx, ty, tz = gps.locate(5)
@@ -127,40 +162,6 @@ end
          end
       end
    end
-   
-  function fuel()
-    write("check fuel ")
-    print(turtle.getFuelLevel())
-
-    local ax = math.abs(x-cx)
-    local ay = math.abs(cy-y)
-    local az = math.abs(cz-z)
-
-    fuelcosttohome = 1 + ax + ay + az
-
-    print("needed")
-    print(fuelcosttohome)
-
-    if turtle.getFuelLevel() < fuelcosttohome then
-        while turtle.getFuelLevel() < 50 do
-            local number = 1
-            for i = 1, 16 do
-                if turtle.getFuelLevel() < fuelcosttohome then
-                    turtle.select(number)
-                    turtle.refuel()
-                end
-                number = number+1
-            end
-            if turtle.getFuelLevel() < fuelcosttohome then
-              write("Running out of fuel")
-              goHome()
-            end
-        end
-
-        write("new fuel level ")
-        print(turtle.getFuelLevel())
-    end
-  end
 
   function dropitems()
     print("drop items")
