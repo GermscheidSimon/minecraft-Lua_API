@@ -211,6 +211,7 @@ end
         turtle.dig()
         turtle.turnLeft()
         turtle.turnLeft()
+        findme()
     end
   end
 
@@ -220,6 +221,7 @@ end
         findme()
     else
         turtle.digUp()
+        findme()
     end
   end
 
@@ -228,6 +230,8 @@ end
     compare()
     turtle.digDown()
     if turtle.down() then
+        findme()
+    else
         findme()
     end
   end
@@ -239,6 +243,8 @@ end
     turtle.dig()
     if turtle.forward() then
         findme()
+    else
+        findme()
     end
     turtle.turnLeft()
     compare()
@@ -249,6 +255,8 @@ end
     turtle.turnLeft()
     turtle.dig()
     if turtle.forward() then
+        findme()
+    else
         findme()
     end
     turtle.turnRight()
