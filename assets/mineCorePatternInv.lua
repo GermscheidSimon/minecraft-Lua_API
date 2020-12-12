@@ -379,6 +379,17 @@ end
             end
         end
     end
+    while z < cz - 1 do
+        moveRight()
+    end
+    while z > ez do
+        xcycle()
+        if z >= ez then
+            for i = 1, 2 do
+                moveLeft()
+            end
+        end
+    end
     while z < cz do
         moveRight()
     end

@@ -26,7 +26,7 @@ local notItems = {
     "minecraft:chest",
     "minecraft:flowing_lava"
       }
-      
+
 function fuel()
     write("check fuel ")
     print(turtle.getFuelLevel())
@@ -370,6 +370,17 @@ end
   function zcycle()
     print("begin z")
     print(z)
+    while z < ez do
+        xcycle()
+        if z <= ez then
+            for i = 1, 2 do
+                moveRight()
+            end
+        end
+    end
+    while z > cz + 1 do
+        moveLeft()
+    end
     while z < ez do
         xcycle()
         if z <= ez then
