@@ -152,7 +152,7 @@ end
                 number = number+1
             end
             if turtle.getFuelLevel() < fuelcosttohome then
-              Write("Running out of fuel")
+              write("Running out of fuel")
               goHome()
             end
         end
