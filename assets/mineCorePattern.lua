@@ -153,6 +153,7 @@ end
             end
             if turtle.getFuelLevel() < fuelcosttohome then
                 Write("Running out of fuel")
+                goHome()
             end
         end
 
@@ -267,6 +268,28 @@ end
         end
         if y > cy then
             movedown()
+        end
+    end
+  end
+
+  function goHome()
+    print("return to base")
+    local ty = y
+    local tx = x
+    local tz = z
+    if y ~= cy then
+        while y < cy do
+            moveup()
+        end
+    end
+    if x ~= cx then
+        while x > cx do
+            moveBack()
+        end
+    end
+    if z ~= cz then
+        while z > cz do
+            moveLeft()
         end
     end
   end
