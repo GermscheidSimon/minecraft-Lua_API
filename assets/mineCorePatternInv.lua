@@ -382,6 +382,7 @@ end
     while z < cz - 1 do
         moveRight()
     end
+    moveforward()
     while z > ez do
         xcycle()
         if z >= ez then
