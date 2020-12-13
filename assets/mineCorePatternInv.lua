@@ -376,6 +376,22 @@ end
     end
   end
 
+  function xcyclealt()
+    print("begin x")
+    print(x)  
+    while x < ex do
+        ycycle()
+        if x <= ex then
+            for i = 1, 2 do
+                moveforward()
+            end
+        end
+    end
+    while x > cx + 1 do
+        moveBack()
+    end
+  end
+
   function zcycle()
     print("begin z")
     print(z)
@@ -392,7 +408,7 @@ end
     end
     moveforward()
     while z > ez do
-        xcycle()
+        xcyclealt()
         if z >= ez then
             for i = 1, 2 do
                 moveLeft()
@@ -402,6 +418,7 @@ end
     while z < cz do
         moveRight()
     end
+    gohome()
   end
 
 function mineForward(num)
