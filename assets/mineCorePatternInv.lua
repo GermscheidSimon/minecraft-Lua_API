@@ -53,7 +53,7 @@ local notItems = {
             end
             if turtle.getFuelLevel() < fuelcosttohome then
               write("Running out of fuel")
-              goHome()
+              returnto()
             end
         end
 
