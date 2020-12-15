@@ -418,7 +418,7 @@ end
     while z < cz do
         moveRight()
     end
-    gohome()
+    turtle.back()
   end
 
 function mineForward(num)
